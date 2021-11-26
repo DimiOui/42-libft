@@ -6,7 +6,7 @@
 #    By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:49:36 by dpaccagn          #+#    #+#              #
-#    Updated: 2021/11/26 11:43:17 by dpaccagn         ###   ########.fr        #
+#    Updated: 2021/11/26 12:09:27 by dpaccagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,6 @@ CFLAGS		= -Wall -Wextra -Werror -I includes -c
 
 ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS}
-so:
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-			cc -nostartfiles -shared -o libft.so $(OBJS)
 
 all:		${NAME}
 
