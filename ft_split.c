@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:21:58 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/27 15:08:08 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:19:48 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static char	**ft_fillwords(char **new, const char *str, char c, size_t count)
 		new[words] = ft_substr(str, i, len);
 		if (!new[words])
 			return (ft_freemem(new, words));
-		while (str[i] != c)
+		while (str[i] && str[i] != c)
 			i++;
 		words++;
 	}
