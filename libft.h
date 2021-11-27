@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:25:17 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/26 12:37:46 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:52:23 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,13 @@ void	ft_putendl_fd(char *str, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 
 // BONUS
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif
