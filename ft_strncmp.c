@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:02:12 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/24 17:09:04 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:47:52 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/* **************************************************************************
+This function compares 2 strings by size n, it then returns the difference
+between them as an int. If they are the same it returns 0
+°************************************************************************** */

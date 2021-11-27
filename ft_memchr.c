@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:06:43 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/27 18:12:44 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:33:29 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/* **************************************************************************
+This function locates the first occurence of c in s, and returns a pointer
+to the byte located
+°************************************************************************** */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tester.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 12:40:06 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/26 11:31:30 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:12:24 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,13 @@
 #include <stdio.h>
 #include <string.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-
-void	*ft_plusone(unsigned int i, char *str)
-{
-	*str += i;
-	return (void *)str;
-}
+int	ft_isprint(int c);
 
 int	main(void)
 {
 
-	char str1[] = "abcdef";
+	char str1 = 'a';
 	//char str2[] = "abci";
-	ft_striteri(str1, ft_plusone(1, &str1));
-	printf("%s\n", str1);
+	ft_isprint(str1);
+	printf("%d\n", str1);
 }

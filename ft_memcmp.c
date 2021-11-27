@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:17:13 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/24 17:09:09 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:48:15 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/* **************************************************************************
+This function compares 2 strings of bytes and returns the difference between
+them as an int
+°************************************************************************** */

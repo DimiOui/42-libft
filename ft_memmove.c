@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 12:15:41 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/24 16:44:31 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:38:33 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/* **************************************************************************
+Like memcopy, this functions copies a string of bytes from src to dest,
+but it also works in the case of strings overlapping
+°************************************************************************** */

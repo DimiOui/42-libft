@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:22:22 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/24 11:23:16 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:45:18 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,8 @@ char	*ft_strdup(const char *src)
 	target[i] = '\0';
 	return (target);
 }
+
+/* **************************************************************************
+This function duplicates the src string by allocating the length of the
+string to a new place in memory and copying each char into it
+°************************************************************************** */

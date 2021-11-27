@@ -6,7 +6,7 @@
 /*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:21:45 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/27 23:43:55 by Dimi             ###   ########.fr       */
+/*   Updated: 2021/11/28 00:30:10 by Dimi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,9 @@ char	*ft_itoa(int nb)
 }
 
 /* **************************************************************************
-This function returns 1 if the parameter is printable
+This function is like atoi but inversed, it returns an int taken as a para-
+meter into a string. The string is filled from the end
+Malloc is protected and free of leaks because in the 2 cases where the funct
+ion must return something special, there's no malloc yet. You only allocate
+when you know you'll fill the string.
 °************************************************************************** */
