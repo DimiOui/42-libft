@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:21:58 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/26 10:34:16 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:08:08 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,6 @@ static size_t	ft_countwords(const char *str, char c)
 			count++;
 		while (str[i] && str[i] != c)
 			i++;
-	}
-	while (str[i])
-	{
-		if (str[i] == c)
-			count++;
-		i++;
 	}
 	return (count);
 }
@@ -76,7 +70,7 @@ static char	**ft_fillwords(char **new, const char *str, char c, size_t count)
 		len = ft_wordlen(str + i, c);
 		new[words] = ft_substr(str, i, len);
 		if (!new[words])
-			return (ft_freemem(new, count));
+			return (ft_freemem(new, words));
 		while (str[i] != c)
 			i++;
 		words++;
@@ -93,7 +87,7 @@ char	**ft_split(const char *str, char c)
 	if (!str)
 		return (NULL);
 	count = ft_countwords(str, c);
-	new = malloc (count +1 * sizeof(*new));
+	new = malloc ((count + 1) * sizeof(*new));
 	if (!new)
 		return (NULL);
 	return (ft_fillwords(new, str, c, count));
