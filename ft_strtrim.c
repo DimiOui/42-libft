@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:11:30 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/25 14:21:17 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:50:00 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
+
+/* **************************************************************************
+Strtrim returns a copy of the source string trimmed from the set values
+It uses strchr to get the end of the string. then substr to make the copy
+°************************************************************************** */

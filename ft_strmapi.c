@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:00:45 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/26 11:42:39 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:51:40 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	target[i] = '\0';
 	return (target);
 }
+
+/* **************************************************************************
+The function applies a function to each characters of a string
+°************************************************************************** */

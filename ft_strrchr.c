@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:25:46 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/28 00:53:23 by Dimi             ###   ########.fr       */
+/*   Updated: 2021/11/28 16:55:19 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
+
+/* **************************************************************************
+Like strchr, but this function returns a pointer to the last occurence of c
+in the string taken as a parameter
+°************************************************************************** */

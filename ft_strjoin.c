@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 10:52:49 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/25 11:21:51 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:47:06 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	target[i + j] = '\0';
 	return (target);
 }
+
+/* **************************************************************************
+Strjoin is a function that concatenate 2 strings into one string.
+°************************************************************************** */

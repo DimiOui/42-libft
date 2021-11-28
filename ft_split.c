@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:21:58 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/28 00:42:47 by Dimi             ###   ########.fr       */
+/*   Updated: 2021/11/28 16:46:35 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ static size_t	ft_countwords(const char *str, char c)
 	return (count);
 }
 
+/* **************************************************************************
+The countwords function counts each word in the original string.
+Incrementing i as long as it's a charset, when i encounters a letter it will
+count a word, increment as long as it's a character/charset, rinse/repeat
+until i encounters the end of the string taken as a parameter.
+°************************************************************************** */
+
 static size_t	ft_wordlen(const char *str, char c)
 {
 	size_t	i;
@@ -40,6 +47,10 @@ static size_t	ft_wordlen(const char *str, char c)
 		i++;
 	return (i);
 }
+
+/* **************************************************************************
+Wordlen is called in fillwords.and gives the size of each words to fill.
+°************************************************************************** */
 
 static char	**ft_freemem(char **new, size_t count)
 {
@@ -54,6 +65,10 @@ static char	**ft_freemem(char **new, size_t count)
 	free (new);
 	return (NULL);
 }
+
+/* **************************************************************************
+Typical function to free all allocated memory
+°************************************************************************** */
 
 static char	**ft_fillwords(char **new, const char *str, char c, size_t count)
 {
@@ -79,6 +94,12 @@ static char	**ft_fillwords(char **new, const char *str, char c, size_t count)
 	return (new);
 }
 
+/* **************************************************************************
+Fillwords does what it says. The wordcount starts from zero and functions
+while the count is not reached. It then creates a string mallocced with
+ft_substr, with the right size and fills it with the right words.
+°************************************************************************** */
+
 char	**ft_split(const char *str, char c)
 {
 	size_t	count;
@@ -94,5 +115,9 @@ char	**ft_split(const char *str, char c)
 }
 
 /* **************************************************************************
-
+The function split takes a string and splits it with charset taken as a para
+meter into an array of strings.
+The first stage is to malloc the right size for the array of strings.
+When done, all the strings are filled with the source words from the original
+string
 °************************************************************************** */

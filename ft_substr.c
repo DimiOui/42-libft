@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 09:54:07 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/26 12:28:11 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:49:46 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	target[i] = '\0';
 	return (target);
 }
+
+/* **************************************************************************
+Like strdup but this function gives you the choice of the size len to copy
+into a new string
+°************************************************************************** */

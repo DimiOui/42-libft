@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:55:42 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/28 00:45:42 by Dimi             ###   ########.fr       */
+/*   Updated: 2021/11/28 17:01:12 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 }
 
 /* **************************************************************************
-LOL
+characters from string src are appended to dst
+size must be equal to the size of the dest buffer
+which caps the number of characters copied to this size -1 or the NULL char.
+Strlcat returns the combined lengh of both src and dest strings without
+counting their terminating null characters
+Result is used to determine if the string was truncated
 °************************************************************************** */
