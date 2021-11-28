@@ -6,7 +6,7 @@
 #    By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:49:36 by dpaccagn          #+#    #+#              #
-#    Updated: 2021/11/27 18:12:25 by dpaccagn         ###   ########.fr        #
+#    Updated: 2021/11/28 18:13:05 by dpaccagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,9 @@ SRCS		=	ft_isalpha.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c\
 
-LST			= ft_lstnew.c
+LST			=	ft_lstnew.c\
+				ft_lstadd_front.c\
+				ft_lstsize.c\
 
 BONUS_OBJS	= ${LST:%.c=%.o}
 
