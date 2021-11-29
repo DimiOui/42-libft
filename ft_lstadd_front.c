@@ -6,7 +6,7 @@
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 17:08:52 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 10:22:05 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2021/11/29 14:04:01 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 	new -> next = *alst;
 	*alst = new;
 }
+
+/* **************************************************************************
+This function adds a new link at the front of your linked list
+°************************************************************************** */
