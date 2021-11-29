@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 17:24:48 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 13:15:07 by dpaccagn         ###   ########.fr       */
+/*   Created: 2021/11/29 11:46:15 by dpaccagn          #+#    #+#             */
+/*   Updated: 2021/11/29 12:34:31 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-	size_t	j;
-
-	if (*little == '\0')
-		return ((char *)(big));
-	i = 0;
-	while (big[i] && i < len)
-	{
-		j = 0;
-		while ((big[i + j] == little[j]) && (i + j < len)
-			&& (big[i + j] && little[j]))
-			j++;
-		if (little[j] == '\0')
-			return ((char *)big + i);
-		i++;
-	}
-	return (NULL);
+	if (!lst)
+		return ;
+	if (del)
+		del(lst -> content);
+	free (lst);
 }
 
 /* **************************************************************************
-This function locates the first occurence of little string in big string
-if little is empty, big is returned
-if little occurs nowhere, NULL is returned
-UNFINISHED
+This function deletes one element from the linked list. First we check if
+the list exists. If not we exit, then if del exists we delete the content of
+the pointed element, and free memory
 °************************************************************************** */

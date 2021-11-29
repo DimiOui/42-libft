@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 17:24:48 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 13:15:07 by dpaccagn         ###   ########.fr       */
+/*   Created: 2021/11/29 10:38:34 by dpaccagn          #+#    #+#             */
+/*   Updated: 2021/11/29 12:29:54 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
+	t_list	*last;
 
-	if (*little == '\0')
-		return ((char *)(big));
-	i = 0;
-	while (big[i] && i < len)
+	if (!new)
+		return ;
+	if (*alst)
 	{
-		j = 0;
-		while ((big[i + j] == little[j]) && (i + j < len)
-			&& (big[i + j] && little[j]))
-			j++;
-		if (little[j] == '\0')
-			return ((char *)big + i);
-		i++;
+		last = ft_lstlast(*alst);
+		last -> next = new;
 	}
-	return (NULL);
+	else
+		*alst = new;
 }
 
 /* **************************************************************************
-This function locates the first occurence of little string in big string
-if little is empty, big is returned
-if little occurs nowhere, NULL is returned
-UNFINISHED
+Adds a new t_list at the end of the linked list.
+We first create our new element "last", then we check wether our list exists
+If it is, our last will be the last element of the linked list,
+then we point next from last to a new element.
+If there is no list, we create a new element.
 °************************************************************************** */
