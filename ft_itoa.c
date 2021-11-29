@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:21:45 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/28 00:30:10 by Dimi             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:07:55 by dpaccagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nlength(int nb)
+static size_t	ft_nlength(int nb)
 {
 	size_t	i;
 
