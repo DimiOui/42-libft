@@ -6,7 +6,7 @@
 #    By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:49:36 by dpaccagn          #+#    #+#              #
-#    Updated: 2021/11/29 13:12:55 by dpaccagn         ###   ########.fr        #
+#    Updated: 2021/11/29 15:02:58 by dpaccagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ LST			=	ft_lstnew.c\
 				ft_lstclear.c\
 				ft_lstiter.c\
 				ft_lstmap.c\
+
 
 BONUS_OBJS	= ${LST:%.c=%.o}
 
