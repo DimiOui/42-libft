@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dimi <Dimi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:26:32 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/28 00:41:42 by Dimi             ###   ########.fr       */
+/*   Updated: 2022/04/04 14:39:37 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *str, int fd)
+int	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-
-	if (!str || !fd)
-		return ;
-	i = 0;
-	while (str[i])
+	if (s != NULL)
 	{
-		ft_putchar_fd(str[i], fd);
-		i++;
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+		return ((int)ft_strlen(s) + 1);
 	}
-	ft_putchar_fd('\n', fd);
+	return (0);
 }
 
 /* **************************************************************************

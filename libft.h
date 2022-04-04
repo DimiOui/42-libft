@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:25:17 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 15:10:39 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:44:36 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char	*ft_itoa(int nb);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *str, int fd);
-void	ft_putendl_fd(char *str, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 
 // BONUS
@@ -74,5 +74,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// MINISHELL
+
+int		ft_atoi2(const char *nptr, long *nbr);
+char	**ft_dup_matrix(char **m);
+char	**ft_extend_matrix(char **in, char *newstr);
+void	ft_free_matrix(char ***m);
+int		ft_isspace(char c);
+char	**ft_matrix_replace_in(char ***big, char **small, int n);
+int		ft_matrixlen(char **m);
+int		ft_putmatrix_fd(char **m, int nl, int fd);
+int		ft_strchars_i(const char *s, char *set);
+int		ft_strchr_i(const char *s, int c);
+char	**ft_subsplit(char const *s, char *needle);
 
 #endif

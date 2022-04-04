@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:08:12 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 15:07:15 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:44:02 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,6 @@
 static int	ft_isnum(char c)
 {
 	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
-static int	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putmatrix_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 10:24:56 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/04 14:39:30 by dimioui          ###   ########.fr       */
+/*   Created: 2022/04/04 14:25:44 by dimioui           #+#    #+#             */
+/*   Updated: 2022/04/04 14:25:49 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putmatrix_fd(char **m, int nl, int fd)
 {
-	if (s != NULL)
-		return ((int)write(fd, s, ft_strlen(s)));
-	return (0);
-}
+	int	i;
+	int	count;
 
-/* **************************************************************************
-This function prints a string to the file descriptor taken as a parameter
-°************************************************************************** */
+	count = 0;
+	i = 0;
+	while (m && m[i])
+	{
+		if (nl)
+			count += ft_putendl_fd(m[i], fd);
+		else
+			count += ft_putstr_fd(m[i], fd);
+		i++;
+	}
+	return (count);
+}

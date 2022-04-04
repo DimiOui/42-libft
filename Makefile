@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+         #
+#    By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:49:36 by dpaccagn          #+#    #+#              #
-#    Updated: 2021/11/29 15:03:18 by dpaccagn         ###   ########.fr        #
+#    Updated: 2022/04/04 14:35:03 by dimioui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,17 @@ SRCS		=	ft_isalpha.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c\
+				ft_matrixlen.c\
+				ft_free_matrix.c\
+				ft_putmatrix_fd.c\
+				ft_extend_matrix.c\
+				ft_matrix_replace_in.c\
+				ft_dup_matrix.c\
+				ft_strchars_i.c\
+				ft_strchr_i.c\
+				ft_subsplit.c\
+				ft_isspace.c\
+				ft_atoi2.c\
 
 LST			=	ft_lstnew.c\
 				ft_lstadd_front.c\

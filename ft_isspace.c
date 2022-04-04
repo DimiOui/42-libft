@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 10:24:56 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/04 14:39:30 by dimioui          ###   ########.fr       */
+/*   Created: 2022/04/04 14:23:51 by dimioui           #+#    #+#             */
+/*   Updated: 2022/04/04 14:23:53 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_putstr_fd(char *s, int fd)
+int	ft_isspace(char c)
 {
-	if (s != NULL)
-		return ((int)write(fd, s, ft_strlen(s)));
-	return (0);
+	return ((c >= 9 && c <= 13) || c == ' ');
 }
-
-/* **************************************************************************
-This function prints a string to the file descriptor taken as a parameter
-°************************************************************************** */

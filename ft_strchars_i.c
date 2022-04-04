@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strchars_i.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 10:24:56 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/04 14:39:30 by dimioui          ###   ########.fr       */
+/*   Created: 2022/04/04 14:27:01 by dimioui           #+#    #+#             */
+/*   Updated: 2022/04/04 14:27:28 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_strchars_i(const char *s, char *set)
 {
-	if (s != NULL)
-		return ((int)write(fd, s, ft_strlen(s)));
-	return (0);
-}
+	int	i;
 
-/* **************************************************************************
-This function prints a string to the file descriptor taken as a parameter
-°************************************************************************** */
+	i = 0;
+	if (!s)
+		return (-1);
+	while (s[i] != '\0')
+	{
+		if (ft_strchr(set, s[i]))
+			return (i);
+		i++;
+	}
+	return (-1);
+}

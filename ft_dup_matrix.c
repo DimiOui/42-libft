@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_dup_matrix.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 10:24:56 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/04 14:39:30 by dimioui          ###   ########.fr       */
+/*   Created: 2022/04/04 14:14:04 by dimioui           #+#    #+#             */
+/*   Updated: 2022/04/04 14:16:56 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+char	**ft_dup_matrix(char **m)
 {
-	if (s != NULL)
-		return ((int)write(fd, s, ft_strlen(s)));
-	return (0);
-}
+	char	**out;
+	int		n_rows;
+	int		i;
 
-/* **************************************************************************
-This function prints a string to the file descriptor taken as a parameter
-°************************************************************************** */
+	i = 0;
+	n_rows = ft_matrixlen(m);
+	out = malloc(sizeof(char *) * (n_rows + 1));
+	if (!out)
+		return (NULL);
+	while (m[i])
+	{
+		out[i] = ft_strdup(m[i]);
+		if (!out[i])
+		{
+			ft_free_matrix(&out);
+			return (NULL);
+		}
+		i++;
+	}
+	out[i] = NULL;
+	return (out);
+}
