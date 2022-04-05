@@ -6,7 +6,7 @@
 #    By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:49:36 by dpaccagn          #+#    #+#              #
-#    Updated: 2022/04/04 15:17:15 by dimioui          ###   ########.fr        #
+#    Updated: 2022/04/05 15:47:22 by dimioui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,8 @@ SRCS		=	$(addprefix srcs/, \
 				ft_subsplit.c\
 				ft_isspace.c\
 				ft_atoi2.c\
+				ft_matrixtolst.c\
+				ft_lsttomatrix.c\
 				)
 
 OBJS		= $(SRCS:.c=.o)

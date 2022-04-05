@@ -6,7 +6,7 @@
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:25:17 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/05 15:21:29 by dimioui          ###   ########.fr       */
+/*   Updated: 2022/04/05 15:39:11 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,7 @@ int		ft_putmatrix_fd(char **m, int nl, int fd);
 int		ft_strchars_i(const char *s, char *set);
 int		ft_strchr_i(const char *s, int c);
 char	**ft_subsplit(char const *s, char *needle);
+char	**ft_lsttomatrix(t_list *lst);
+t_list	*ft_matrixtolst(char **matrix);
 
 #endif
