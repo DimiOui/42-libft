@@ -6,7 +6,7 @@
 /*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:25:17 by dpaccagn          #+#    #+#             */
-/*   Updated: 2022/04/04 14:44:36 by dimioui          ###   ########.fr       */
+/*   Updated: 2022/04/05 15:21:29 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ char	**ft_split(char const *str, char charset);
 char	*ft_itoa(int nb);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-void	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 int		ft_putendl_fd(char *s, int fd);
 int		ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int nb, int fd);
+int		ft_putnbr_fd(int n, int fd);
 
 // BONUS
 
