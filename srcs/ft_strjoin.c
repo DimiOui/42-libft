@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaccagn <dpaccagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dimioui <dimioui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 10:52:49 by dpaccagn          #+#    #+#             */
-/*   Updated: 2021/11/29 15:14:52 by dpaccagn         ###   ########.fr       */
+/*   Updated: 2022/04/05 16:16:04 by dimioui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,32 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /* **************************************************************************
 Strjoin is a function that concatenate 2 strings into one string.
 °************************************************************************** */
+
+/*
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		len_s1;
+	int		len_s2;
+	char	*s3;
+	int		i;
+
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	i = 0;
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	s3 = (char *)malloc(len_s1 + len_s2 + 1);
+	if (s3 == NULL)
+		return (NULL);
+	while (i < len_s1 || i < len_s2)
+	{
+		if (i < len_s1)
+			s3[i] = s1[i];
+		if (i < len_s2)
+			s3[i + len_s1] = s2[i];
+		i++;
+	}
+	s3[len_s1 + len_s2] = '\0';
+	return (s3);
+}
+*/
